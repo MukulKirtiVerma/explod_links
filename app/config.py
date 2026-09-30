@@ -16,3 +16,6 @@ CHROME_APP = "Google Chrome"
 HOST = "127.0.0.1"
 PORT = 8001
 
+
+# After all tabs have opened, every tab in the new window is sent here.
+FOLLOWUP_URL = "https://youtube.com"
