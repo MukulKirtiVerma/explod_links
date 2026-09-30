@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Explode Links</h1>
+<p class="muted">
+  Chrome profile: <b>{{ profile_name }} ({{ profile_dir }})</b>
+  &middot; each URL opens in its own tab.
+</p>
+
+<h3>Links in url_links.json (<span id="count">0</span>)</h3>
+<ol id="links"></ol>
+
+<div class="actions">
+  <button id="open" class="btn btn-primary">Open Chrome profile &amp; links</button>
+  <button id="reload" class="btn btn-secondary">Reload JSON</button>
+</div>
+<div id="status"></div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', path='js/app.js') }}"></script>
+{% endblock %}
